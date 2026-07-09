@@ -22,3 +22,7 @@ body {
   padding-left: 32px;
   padding-right: 32px;
 }
+
+section {
+  margin-top: 75px;
+}

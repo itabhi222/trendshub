@@ -12,9 +12,9 @@ body {
 
 * {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
+
 .container {
   width: 100%;
   max-width: 1400px;
@@ -25,4 +25,28 @@ body {
 
 section {
   margin-top: 75px;
+}
+
+/* ===========================
+   Global Card Padding (+4px)
+=========================== */
+
+.global-padding .rounded-3xl {
+  padding: calc(.75rem + 2px) !important;
+}
+
+.global-padding .rounded-2xl {
+  padding: calc(.75rem + 2px) !important;
+}
+
+/* ===========================
+   Global Button Padding (+4px)
+=========================== */
+
+.global-padding a.rounded-full,
+.global-padding button.rounded-full {
+  padding-top: calc(0.30rem + 2px) !important;
+  padding-bottom: calc(0.30rem + 2px) !important;
+  padding-left: calc(.75rem + 2px) !important;
+  padding-right: calc(.75rem + 2px) !important;
 }

@@ -101,7 +101,7 @@ export default function Navbar() {
               >
                 {item.title}
 
-                <span className="absolute -bottom-2 left-0 h-[2px] w-0 bg-violet-500 transition-all duration-300 hover:w-full" />
+                
               </a>
             ))}
 

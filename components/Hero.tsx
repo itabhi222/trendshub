@@ -1,5 +1,6 @@
  "use client";
 
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {
   Sparkles,
@@ -10,7 +11,23 @@ import {
 } from "lucide-react";
 
 export default function Hero() {
+  const [hasSeenAd, setHasSeenAd] = useState(false);
+
+  useEffect(() => {
+    const stored = window.sessionStorage.getItem("hero-telegram-ad-seen");
+    if (stored === "true") {
+      setHasSeenAd(true);
+    }
+  }, []);
+
   const handleTelegramClick = () => {
+    if (!hasSeenAd) {
+      setHasSeenAd(true);
+      window.sessionStorage.setItem("hero-telegram-ad-seen", "true");
+      window.open("https://omg10.com/4/11260744", "_blank", "noopener,noreferrer");
+      return;
+    }
+
     const footerSection = document.getElementById("telegram");
     if (footerSection) {
       footerSection.scrollIntoView({ behavior: "smooth", block: "start" });

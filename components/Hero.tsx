@@ -1,5 +1,6 @@
  "use client";
 
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {
   Sparkles,
@@ -10,6 +11,29 @@ import {
 } from "lucide-react";
 
 export default function Hero() {
+  const [hasSeenAd, setHasSeenAd] = useState(false);
+
+  useEffect(() => {
+    const stored = window.sessionStorage.getItem("hero-telegram-ad-seen");
+    if (stored === "true") {
+      setHasSeenAd(true);
+    }
+  }, []);
+
+  const handleTelegramClick = () => {
+    if (!hasSeenAd) {
+      setHasSeenAd(true);
+      window.sessionStorage.setItem("hero-telegram-ad-seen", "true");
+      window.open("https://omg10.com/4/11260744", "_blank", "noopener,noreferrer");
+      return;
+    }
+
+    const footerSection = document.getElementById("telegram");
+    if (footerSection) {
+      footerSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <section
       className="relative overflow-hidden pt-36 pb-32"
@@ -75,15 +99,16 @@ export default function Hero() {
                 Explore
               </a>
 
-              <a
-                href="#telegram"
+              <button
+                type="button"
+                onClick={handleTelegramClick}
                 className="flex items-center gap-2 rounded-full border border-violet-400/30 bg-white/5 px-8 py-4 font-semibold text-violet-200 shadow-[0_0_20px_rgba(167,139,250,0.2)] transition duration-300 hover:scale-105 hover:bg-violet-500/10 animate-pulse"
               >
                 Telegram
 
                 <ArrowRight size={18} />
 
-              </a>
+              </button>
 
             </div>
 

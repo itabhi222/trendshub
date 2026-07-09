@@ -29,7 +29,7 @@ export default function TelegramTimer() {
 
   if (seconds > 0) {
     return (
-      <div className="space-y-3">
+      <div className="space-y-3 text-center">
         <p className="text-5xl font-bold text-violet-400">
           {seconds}
         </p>
@@ -42,10 +42,10 @@ export default function TelegramTimer() {
 
   return (
     <a
-      href="https://t.me/YOUR_TELEGRAM_USERNAME"
+      href="https://telegram.me/+Ib9foRdYIiFkNmVl"
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-block rounded-full bg-green-600 px-8 py-4 font-semibold text-white transition hover:bg-green-700"
+      className="inline-block rounded-full bg-green-600 px-8 py-4 text-lg font-semibold text-white shadow-lg transition duration-300 hover:scale-105 hover:bg-green-700"
     >
       Join Telegram
     </a>

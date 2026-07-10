@@ -6,12 +6,12 @@ import AITools from "@/components/AITools";
 import Footer from "@/components/Footer";
 import AboutSection from "@/components/AboutSection";
 import BannerAd from "@/components/BannerAd";
-import OpenInBrowserPopup from "@/components/OpenInBrowserPopup";
+// import OpenInBrowserPopup from "@/components/OpenInBrowserPopup";
 
 export default function Home() {
   return (
     <>
-      <OpenInBrowserPopup />
+      {/* <OpenInBrowserPopup /> */}
       <Navbar />
 
       <main className="pb-24">

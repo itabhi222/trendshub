@@ -18,24 +18,6 @@ export default function RootLayout({
       <body className="global-padding">
         {children}
 
-        {/* Monetag In-Page Push */}
-        <Script
-          id="monetag-inpage-push"
-          strategy="afterInteractive"
-        >
-          {`
-            (function(s){
-              s.dataset.zone='11260737';
-              s.src='https://nap5k.com/tag.min.js';
-            })(
-              [document.documentElement, document.body]
-                .filter(Boolean)
-                .pop()
-                .appendChild(document.createElement('script'))
-            );
-          `}
-        </Script>
-
         {/* Monetag Vignette */}
         <Script
           id="monetag-vignette"
@@ -53,6 +35,8 @@ export default function RootLayout({
             );
           `}
         </Script>
+
+        
 
       </body>
     </html>
